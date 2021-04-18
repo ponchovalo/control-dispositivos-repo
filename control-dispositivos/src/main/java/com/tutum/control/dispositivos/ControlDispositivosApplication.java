@@ -18,10 +18,20 @@ public class ControlDispositivosApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		String passord = "12345";
+		String[] password = {"admin", 
+							"IValenzuela", 
+							"JDiaz", 
+							"JGaytan", 
+							"JRamirez", 
+							"KGallegos", 
+							"ALuna",
+							"HLopez",
+							"UReyes",
+							"RUbillo",
+							"RGonzalez"};
 		
-		for(int i = 0; i < 4; i++) {
-			String passwordBcrypt = passwordEncoder.encode(passord);
+		for(int i = 0; i < password.length; i++) {
+			String passwordBcrypt = passwordEncoder.encode(password[i]);
 			System.out.println(passwordBcrypt);
 		}
 		
